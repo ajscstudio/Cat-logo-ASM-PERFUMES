@@ -589,15 +589,15 @@ padding-bottom: 3px;
 display: inline-block;
 }
 
-/* SUB-PESTAÑAS DE BATH & BODY WORKS */
-.bbw-subnav {
+/* SUB-PESTAÑAS DE MARCAS (BATH & BODY WORKS Y VASELINE) */
+.subnav-container {
 display: flex;
 justify-content: center;
 gap: 15px;
 margin-bottom: 35px;
 flex-wrap: wrap;
 }
-.bbw-tab-btn {
+.tab-btn {
 background: transparent;
 border: 1px solid var(--negro);
 color: var(--negro);
@@ -610,7 +610,7 @@ letter-spacing: 1.5px;
 cursor: pointer;
 transition: all 0.25s ease;
 }
-.bbw-tab-btn.active, .bbw-tab-btn:hover {
+.tab-btn.active, .tab-btn:hover {
 background: var(--negro);
 color: var(--blanco);
 }
@@ -1065,11 +1065,11 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 
 <!-- COLUMNA 3: VASELINE -->
 <div class="skincare-card" onclick="openSkincareCategory('vaseline')">
-<img src="vaseline_bg.jpg" alt="Vaseline Lip Therapy" class="skincare-card-bg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%23EAEAEA\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Montserrat\' font-size=\'14\' fill=\'%23777777\'>Vaseline</text></svg>';">
+<img src="vaseline_bg.jpg" alt="Vaseline" class="skincare-card-bg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%23EAEAEA\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Montserrat\' font-size=\'14\' fill=\'%23777777\'>Vaseline</text></svg>';">
 <div class="skincare-overlay"></div>
 <div class="skincare-content">
 <h3 style="color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px;">Vaseline</h3>
-<span class="skincare-btn-text">Ver Productos</span>
+<span class="skincare-btn-text">Explorar Colección</span>
 </div>
 </div>
 </div>
@@ -1114,10 +1114,16 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 
 <!-- SUB-NAVEGACIÓN INTERACTIVA DE BATH & BODY WORKS -->
-<div id="bbw-subnav-container" class="bbw-subnav" style="display: none;">
-<button class="bbw-tab-btn active" id="btn-bbw-cremas" onclick="filterBBWSubcategory('cremas')">Body Motion / Cremas</button>
-<button class="bbw-tab-btn" id="btn-bbw-splash" onclick="filterBBWSubcategory('splash')">Body Splash</button>
-<button class="bbw-tab-btn" id="btn-bbw-gel" onclick="filterBBWSubcategory('gel')">Gel Antibacterial</button>
+<div id="bbw-subnav-container" class="subnav-container" style="display: none;">
+<button class="tab-btn active" id="btn-bbw-cremas" onclick="filterBBWSubcategory('cremas')">Body Motion / Cremas</button>
+<button class="tab-btn" id="btn-bbw-splash" onclick="filterBBWSubcategory('splash')">Body Splash</button>
+<button class="tab-btn" id="btn-bbw-gel" onclick="filterBBWSubcategory('gel')">Gel Antibacterial</button>
+</div>
+
+<!-- SUB-NAVEGACIÓN INTERACTIVA DE VASELINE -->
+<div id="vaseline-subnav-container" class="subnav-container" style="display: none;">
+<button class="tab-btn active" id="btn-vaseline-lip" onclick="filterVaselineSubcategory('lip_therapy')">Lip Therapy</button>
+<button class="tab-btn" id="btn-vaseline-glazed" onclick="filterVaselineSubcategory('glazed_glisten')">Glazed & Glisten</button>
 </div>
 
 <div class="filter-sort-bar">
@@ -1355,16 +1361,20 @@ salida: "Mandarina jugosa, naranja y notas cítricas vibrantes.", corazon: "Cara
 { id: 415, nombre: "Frosted Coconut Snowball PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gel_frosted_coconut.jpg", visible: true, agotado: false },
 { id: 416, nombre: "Eucalyptus Mint PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gel_eucalyptus_mint.jpg", visible: true, agotado: false },
 
-/* --- SECCIÓN VASELINE ($15.000 COP Y $22.000 COP) --- */
-{ id: 501, nombre: "Vaseline Lip Therapy Rosy Lips", marca: "Vaseline", categoria: "vaseline", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "vaseline_rosy_lips.jpg", visible: true, agotado: false, salida: "Rosa suave y notas dulces.", corazon: "Hidratación profunda con vaselina purificada.", fondo: "Toque rosado natural." },
-{ id: 502, nombre: "Vaseline Lip Therapy Cocoa Butter", marca: "Vaseline", categoria: "vaseline", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "vaseline_cocoa_butter.jpg", visible: true, agotado: false, salida: "Manteca de cacao enriquecida.", corazon: "Nutrición intensa para labios secos.", fondo: "Aroma suave a cacao." },
-{ id: 503, nombre: "Vaseline Lip Therapy Vanilla Cocoa", marca: "Vaseline", categoria: "vaseline", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 22000, precioStr: "$ 22.000 COP", img: "vaseline_vanilla_cocoa.jpg", visible: true, agotado: false, salida: "Vainilla cálida y manteca de cacao.", corazon: "Hidratación ultra nutritiva.", fondo: "Acabado suave y dulce." }
+/* --- SECCIÓN VASELINE - SUBCATEGORÍA 1: LIP THERAPY ($15.000 COP) --- */
+{ id: 501, nombre: "Vaseline Lip Therapy Rosy Lips", marca: "Vaseline", categoria: "vaseline", subcategoria: "lip_therapy", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "vaseline_rosy_lips.jpg", visible: true, agotado: false, salida: "Rosa suave y notas dulces.", corazon: "Hidratación profunda con vaselina purificada.", fondo: "Toque rosado natural." },
+{ id: 502, nombre: "Vaseline Lip Therapy Cocoa Butter", marca: "Vaseline", categoria: "vaseline", subcategoria: "lip_therapy", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "vaseline_cocoa_butter.jpg", visible: true, agotado: false, salida: "Manteca de cacao enriquecida.", corazon: "Nutrición intensa para labios secos.", fondo: "Aroma suave a cacao." },
+
+/* --- SECCIÓN VASELINE - SUBCATEGORÍA 2: GLAZED & GLISTEN ($22.000 COP) --- */
+{ id: 503, nombre: "Vaseline Glazed & Glisten Sunlit Glow Vanilla Cocoa", marca: "Vaseline", categoria: "vaseline", subcategoria: "glazed_glisten", genero: "unisex", presentacion: "6.8 fl oz", concentracion: "Body Gel Oil Shimmer", precioNum: 22000, precioStr: "$ 22.000 COP", img: "vaseline_glazed_sunlit_glow.jpg", visible: true, agotado: false, salida: "Vainilla batida y manteca de cacao pura.", corazon: "Aceite en gel ligero con brillo rosado-dorado.", fondo: "Acabado radiante e hidratación intensiva." },
+{ id: 504, nombre: "Vaseline Glazed & Glisten Golden Hour Glow Vanilla Cocoa", marca: "Vaseline", categoria: "vaseline", subcategoria: "glazed_glisten", genero: "unisex", presentacion: "6.8 fl oz", concentracion: "Body Gel Oil Shimmer", precioNum: 22000, precioStr: "$ 22.000 COP", img: "vaseline_glazed_golden_hour.jpg", visible: true, agotado: false, salida: "Flor solar, vainilla dulce y cacao.", corazon: "Aceite en gel con destellos bronce cálido.", fondo: "Piel luminosa con brillo estilo hora dorada." }
 ];
 
 let cart = [];
 let currentSlide = 0;
 let currentCategoryFilter = 'todos';
 let currentBBWSubcategory = 'cremas';
+let currentVaselineSubcategory = 'lip_therapy';
 let currentSearchQuery = '';
 const slides = document.querySelectorAll('.carousel-slide');
 const dots = document.querySelectorAll('.carousel-dots .dot');
@@ -1450,6 +1460,7 @@ document.getElementById('catalogo-vista').style.display = 'none';
 document.getElementById('detalle-vista').style.display = 'none';
 document.getElementById('info-vista').style.display = 'none';
 document.getElementById('bbw-subnav-container').style.display = 'none';
+document.getElementById('vaseline-subnav-container').style.display = 'none';
 }
 
 function showHome() {
@@ -1478,8 +1489,11 @@ document.getElementById('bbw-subnav-container').style.display = 'flex';
 filterBBWSubcategory('cremas');
 return;
 } else if (catKey === 'vaseline') {
-titleEl.textContent = 'Vaseline Lip Therapy';
-subTitleEl.textContent = 'Hidratación Labial Intensiva';
+titleEl.textContent = 'Vaseline Cuidado Personal';
+subTitleEl.textContent = 'Lip Therapy y Glazed & Glisten';
+document.getElementById('vaseline-subnav-container').style.display = 'flex';
+filterVaselineSubcategory('lip_therapy');
+return;
 }
 
 applyFiltersAndSort();
@@ -1488,10 +1502,19 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
 function filterBBWSubcategory(subKey) {
 currentBBWSubcategory = subKey;
-document.querySelectorAll('.bbw-tab-btn').forEach(btn => btn.classList.remove('active'));
+document.querySelectorAll('#bbw-subnav-container .tab-btn').forEach(btn => btn.classList.remove('active'));
 if (subKey === 'cremas') document.getElementById('btn-bbw-cremas').classList.add('active');
 if (subKey === 'splash') document.getElementById('btn-bbw-splash').classList.add('active');
 if (subKey === 'gel') document.getElementById('btn-bbw-gel').classList.add('active');
+
+applyFiltersAndSort();
+}
+
+function filterVaselineSubcategory(subKey) {
+currentVaselineSubcategory = subKey;
+document.querySelectorAll('#vaseline-subnav-container .tab-btn').forEach(btn => btn.classList.remove('active'));
+if (subKey === 'lip_therapy') document.getElementById('btn-vaseline-lip').classList.add('active');
+if (subKey === 'glazed_glisten') document.getElementById('btn-vaseline-glazed').classList.add('active');
 
 applyFiltersAndSort();
 }
@@ -1532,7 +1555,7 @@ result = result.filter(p => p.marca === 'EOS');
 } else if (currentCategoryFilter === 'bathbody') {
 result = result.filter(p => p.marca === 'Bath & Body Works' && p.subcategoria === currentBBWSubcategory);
 } else if (currentCategoryFilter === 'vaseline') {
-result = result.filter(p => p.marca === 'Vaseline');
+result = result.filter(p => p.marca === 'Vaseline' && p.subcategoria === currentVaselineSubcategory);
 }
 
 if (currentSearchQuery) {
