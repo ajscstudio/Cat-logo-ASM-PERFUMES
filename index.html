@@ -510,7 +510,7 @@ transition: all 0.2s; text-decoration: none;
 .btn-wa-item:hover { background-color: var(--negro); color: var(--blanco); }
 .btn-wa-item svg { fill: currentColor; width: 16px; height: 16px; }
 
-/* --- NUEVA SECCIÓN DE CUIDADO DE LA PIEL (INTERACTIVA) --- */
+/* --- SECCIÓN DE CUIDADO DE LA PIEL (INTERACTIVA) --- */
 .skincare-section {
 background-color: var(--blanco);
 padding: 70px 20px 80px 20px;
@@ -577,17 +577,6 @@ position: relative;
 z-index: 3;
 text-align: center;
 width: 100%;
-}
-.skincare-logo-img {
-max-height: 40px;
-max-width: 160px;
-object-fit: contain;
-filter: brightness(0) invert(1);
-margin-bottom: 12px;
-transition: transform 0.3s ease;
-}
-.skincare-card:hover .skincare-logo-img {
-transform: scale(1.05);
 }
 .skincare-btn-text {
 font-size: 0.68rem;
@@ -1014,7 +1003,7 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 </section>
 
-<!-- SECCIÓN DE COLECCIONES EN PC -->
+<!-- SECCIÓN DE COLECCIONES EN PC (HOMBRE, MUJER, UNISEX) -->
 <div id="colecciones" class="collections-grid-pc">
 <div class="collection-card-item">
 <div class="collection-img-wrapper">
@@ -1045,22 +1034,7 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 </div>
 
-<!-- SECCIÓN DE PERFUMES DESTACADOS -->
-<div class="section-header" style="background-color: var(--blanco);">
-<span class="section-tag">Selección</span>
-<h2 class="section-title">Perfumes destacados</h2>
-<a class="section-action-link" onclick="filterPerfumes('todos')">Ver catálogo completo</a>
-</div>
-<div class="container" id="featured-container" style="background-color: var(--blanco); border-bottom: 1px solid var(--gris-claro);"></div>
-
-<!-- COMPROMISO / AUTENTICIDAD -->
-<section class="authenticity-section">
-<span class="tag">Nuestro compromiso</span>
-<h2>La autenticidad es nuestra esencia</h2>
-<p>En ASMperfumes creemos que cada fragancia cuenta una historia. Por eso, nuestro compromiso es ofrecer perfumes 100 % originales para que encuentres el aroma que mejor representa tu personalidad.</p>
-</section>
-
-<!-- NUEVA SECCIÓN CUIDADO DE LA PIEL (EOS, BATH & BODY WORKS, VASELINE) -->
+<!-- NUEVA SECCIÓN CUIDADO DE LA PIEL (UBICADA DEBAJO DE LAS COLECCIONES) -->
 <section class="skincare-section">
 <div class="skincare-container">
 <div class="skincare-banner">
@@ -1095,11 +1069,26 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 <div class="skincare-overlay"></div>
 <div class="skincare-content">
 <h3 style="color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px;">Vaseline</h3>
-<span class="skincare-btn-text">Ver Lip Therapy</span>
+<span class="skincare-btn-text">Ver Productos</span>
 </div>
 </div>
 </div>
 </div>
+</section>
+
+<!-- SECCIÓN DE PERFUMES DESTACADOS -->
+<div class="section-header" style="background-color: var(--blanco);">
+<span class="section-tag">Selección</span>
+<h2 class="section-title">Perfumes destacados</h2>
+<a class="section-action-link" onclick="filterPerfumes('todos')">Ver catálogo completo</a>
+</div>
+<div class="container" id="featured-container" style="background-color: var(--blanco); border-bottom: 1px solid var(--gris-claro);"></div>
+
+<!-- COMPROMISO / AUTENTICIDAD -->
+<section class="authenticity-section">
+<span class="tag">Nuestro compromiso</span>
+<h2>La autenticidad es nuestra esencia</h2>
+<p>En ASMperfumes creemos que cada fragancia cuenta una historia. Por eso, nuestro compromiso es ofrecer perfumes 100 % originales para que encuentres el aroma que mejor representa tu personalidad.</p>
 </section>
 
 <!-- SECCIÓN REGALOS -->
@@ -1324,20 +1313,20 @@ id: 17, nombre: "Odyssey Mandarin Sky Elixir", marca: "Lattafa", genero: "unisex
 salida: "Mandarina jugosa, naranja y notas cítricas vibrantes.", corazon: "Caramelo, notas florales y especias dulces.", fondo: "Ámbar, vainilla, sándalo y almizcle."
 },
 
-// --- SECCIÓN EOS (CREMAS CORPORALES - $65.000 COP) ---
+/* --- SECCIÓN EOS (CREMAS CORPORALES - $65.000 COP) --- */
 { id: 101, nombre: "EOS Vanilla Cashmere Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eos_vanilla_cashmere.jpg", visible: true, agotado: false, salida: "Vainilla batida y madera de cashmere.", corazon: "Leche de sándalo y acordes cremosos.", fondo: "Musk suave y azúcar moreno." },
 { id: 102, nombre: "EOS Pistachio Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eos_pistachio.jpg", visible: true, agotado: false, salida: "Pistacho tostado y crema de almendras.", corazon: "Vainilla dulce y flor de azahar.", fondo: "Sándalo cremoso y ámbar." },
 { id: 103, nombre: "EOS Pink Champagne Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eos_pink_champagne.jpg", visible: true, agotado: false, salida: "Champán rosado y fresas silvestres.", corazon: "Frutos rojos y pétalos de rosa.", fondo: "Azúcar glaseado y almizcle dulce." },
 { id: 104, nombre: "EOS Strawberry Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eos_strawberry.jpg", visible: true, agotado: false, salida: "Fresa fresca y nata montada.", corazon: "Azúcar de caña y acordes frutales.", fondo: "Vainilla y almizcle blanco." },
 
-// --- SECCIÓN BATH & BODY WORKS - BODY MOTION / CREMAS ($75.000 COP) ---
+/* --- SECCIÓN BATH & BODY WORKS - BODY MOTION / CREMAS ($75.000 COP) --- */
 { id: 201, nombre: "Ivory Cashmere Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_ivory_cashmere_cream.jpg", visible: true, agotado: false },
 { id: 202, nombre: "In the Stars Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_in_the_stars_cream.jpg", visible: true, agotado: false },
 { id: 203, nombre: "Midnight Rouge Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_midnight_rouge_cream.jpg", visible: true, agotado: false },
 { id: 204, nombre: "Gingham Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gingham_cream.jpg", visible: true, agotado: false },
 { id: 205, nombre: "A Thousand Wishes Granted Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_thousand_wishes_granted_cream.jpg", visible: true, agotado: false },
 
-// --- SECCIÓN BATH & BODY WORKS - BODY SPLASH ($75.000 COP) ---
+/* --- SECCIÓN BATH & BODY WORKS - BODY SPLASH ($75.000 COP) --- */
 { id: 301, nombre: "Oh Cherry Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_oh_cherry.jpg", visible: true, agotado: false },
 { id: 302, nombre: "Orchid Effect Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_orchid_effect.jpg", visible: true, agotado: false },
 { id: 303, nombre: "Gingham Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gingham_splash.jpg", visible: true, agotado: false },
@@ -1348,7 +1337,7 @@ salida: "Mandarina jugosa, naranja y notas cítricas vibrantes.", corazon: "Cara
 { id: 308, nombre: "A Thousand Wishes Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_thousand_wishes_splash.jpg", visible: true, agotado: false },
 { id: 309, nombre: "Midnight Rouge Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_midnight_rouge_splash.jpg", visible: true, agotado: false },
 
-// --- SECCIÓN BATH & BODY WORKS - GEL ANTIBACTERIAL ($75.000 COP) ---
+/* --- SECCIÓN BATH & BODY WORKS - GEL ANTIBACTERIAL ($75.000 COP) --- */
 { id: 401, nombre: "A Thousand Wishes PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gel_thousand_wishes.jpg", visible: true, agotado: false },
 { id: 402, nombre: "Cookie Butter Truffle PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gel_cookie_butter.jpg", visible: true, agotado: false },
 { id: 403, nombre: "Santa’s Milk & Cookies PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gel_santas_milk.jpg", visible: true, agotado: false },
@@ -1366,9 +1355,10 @@ salida: "Mandarina jugosa, naranja y notas cítricas vibrantes.", corazon: "Cara
 { id: 415, nombre: "Frosted Coconut Snowball PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gel_frosted_coconut.jpg", visible: true, agotado: false },
 { id: 416, nombre: "Eucalyptus Mint PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "bbw_gel_eucalyptus_mint.jpg", visible: true, agotado: false },
 
-// --- SECCIÓN VASELINE - LIP THERAPY ($15.000 COP) ---
+/* --- SECCIÓN VASELINE ($15.000 COP Y $22.000 COP) --- */
 { id: 501, nombre: "Vaseline Lip Therapy Rosy Lips", marca: "Vaseline", categoria: "vaseline", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "vaseline_rosy_lips.jpg", visible: true, agotado: false, salida: "Rosa suave y notas dulces.", corazon: "Hidratación profunda con vaselina purificada.", fondo: "Toque rosado natural." },
-{ id: 502, nombre: "Vaseline Lip Therapy Cocoa Butter", marca: "Vaseline", categoria: "vaseline", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "vaseline_cocoa_butter.jpg", visible: true, agotado: false, salida: "Manteca de cacao enriquecida.", corazon: "Nutrición intensa para labios secos.", fondo: "Aroma suave a cacao." }
+{ id: 502, nombre: "Vaseline Lip Therapy Cocoa Butter", marca: "Vaseline", categoria: "vaseline", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "vaseline_cocoa_butter.jpg", visible: true, agotado: false, salida: "Manteca de cacao enriquecida.", corazon: "Nutrición intensa para labios secos.", fondo: "Aroma suave a cacao." },
+{ id: 503, nombre: "Vaseline Lip Therapy Vanilla Cocoa", marca: "Vaseline", categoria: "vaseline", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 22000, precioStr: "$ 22.000 COP", img: "vaseline_vanilla_cocoa.jpg", visible: true, agotado: false, salida: "Vainilla cálida y manteca de cacao.", corazon: "Hidratación ultra nutritiva.", fondo: "Acabado suave y dulce." }
 ];
 
 let cart = [];
@@ -1882,4 +1872,3 @@ renderFeaturedHome();
 </script>
 </body>
 </html>
->
