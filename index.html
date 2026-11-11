@@ -115,7 +115,6 @@ display: none;
 align-items: center;
 justify-content: center;
 gap: 15px;
-animation: fadeIn 0.3s ease;
 }
 .search-bar-container.active { display: flex; }
 .search-input {
@@ -510,7 +509,7 @@ transition: all 0.2s; text-decoration: none;
 .btn-wa-item:hover { background-color: var(--negro); color: var(--blanco); }
 .btn-wa-item svg { fill: currentColor; width: 16px; height: 16px; }
 
-/* --- SECCIÓN DE CUIDADO DE LA PIEL (INTERACTIVA) --- */
+/* --- SECCIÓN DE CUIDADO DE LA PIEL --- */
 .skincare-section {
 background-color: var(--blanco);
 padding: 70px 20px 80px 20px;
@@ -589,7 +588,7 @@ padding-bottom: 3px;
 display: inline-block;
 }
 
-/* SUB-PESTAÑAS DE MARCAS (BATH & BODY WORKS Y VASELINE) */
+/* SUB-PESTAÑAS DE MARCAS */
 .subnav-container {
 display: flex;
 justify-content: center;
@@ -684,26 +683,6 @@ color: var(--negro);
 font-weight: 600;
 text-transform: uppercase;
 }
-.fragrantica-notes-box {
-background: var(--marfil);
-padding: 18px;
-margin-bottom: 25px;
-border-left: 2px solid var(--negro);
-}
-.fragrantica-notes-box h4 {
-font-size: 0.72rem;
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 10px;
-font-weight: 600;
-}
-.note-category {
-font-size: 0.78rem;
-color: var(--subtitulo-gris);
-margin-bottom: 6px;
-line-height: 1.4;
-}
-.note-category strong { color: var(--negro); }
 
 .quantity-selector {
 display: flex;
@@ -745,7 +724,7 @@ transition: all 0.2s;
 font-size: 0.7rem; color: var(--subtitulo-gris); text-align: center; margin-top: 15px;
 }
 
-/* --- VISTA SECCIONES INFORMATIVAS (MODAL / PÁGINA) --- */
+/* --- VISTA SECCIONES INFORMATIVAS --- */
 #info-vista {
 background-color: var(--blanco);
 max-width: 850px;
@@ -767,12 +746,6 @@ color: var(--subtitulo-gris);
 line-height: 1.8;
 }
 .info-body-content p { margin-bottom: 18px; }
-.info-body-content h3 {
-font-family: 'Playfair Display', serif;
-color: var(--negro);
-font-size: 1.2rem;
-margin: 25px 0 10px 0;
-}
 
 /* --- SECCIONES EDITORIALES --- */
 .authenticity-section {
@@ -956,18 +929,18 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 </div>
 
-<!-- NOTIFICACIÓN TOAST EMERGENTE -->
+<!-- NOTIFICACIÓN TOAST -->
 <div class="toast-notification" id="toast-notification">
 <span id="toast-message">Producto agregado al carrito</span>
 <button class="toast-btn" onclick="toggleCart(); hideToast();">Ver carrito</button>
 </div>
 
-<!-- BOTÓN FLOTANTE PERMANENTE DE WHATSAPP -->
+<!-- BOTÓN FLOTANTE WHATSAPP -->
 <a href="https://wa.me/573018738631" target="_blank" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
 <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
 </a>
 
-<!-- CARRUSEL SUPERIOR HERO (SOLO EN INICIO) -->
+<!-- CARRUSEL SUPERIOR HERO -->
 <div class="hero-carousel" id="hero-carousel">
 <div class="carousel-slide active promo-slide" id="slide-0">
 <h2>Envío Nacional Gratis</h2>
@@ -1003,7 +976,7 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 </section>
 
-<!-- SECCIÓN DE COLECCIONES EN PC (HOMBRE, MUJER, UNISEX) -->
+<!-- SECCIÓN DE COLECCIONES EN PC -->
 <div id="colecciones" class="collections-grid-pc">
 <div class="collection-card-item">
 <div class="collection-img-wrapper">
@@ -1043,9 +1016,9 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 
 <div class="skincare-grid">
-<!-- COLUMNA 1: EOS -->
+<!-- EOS -->
 <div class="skincare-card" onclick="openSkincareCategory('eos')">
-<img src="eos.jpg" alt="EOS Cuidado Corporal" class="skincare-card-bg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%23EAEAEA\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Montserrat\' font-size=\'14\' fill=\'%23777777\'>EOS</text></svg>';">
+<img src="eos.jpg" alt="EOS" class="skincare-card-bg">
 <div class="skincare-overlay"></div>
 <div class="skincare-content">
 <h3 style="color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px;">eos</h3>
@@ -1053,9 +1026,9 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 </div>
 
-<!-- COLUMNA 2: BATH & BODY WORKS -->
+<!-- BATH & BODY WORKS -->
 <div class="skincare-card" onclick="openSkincareCategory('bathbody')">
-<img src="logobath&body.jpg" alt="Bath & Body Works" class="skincare-card-bg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%23DCDCDC\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Montserrat\' font-size=\'14\' fill=\'%23777777\'>Bath & Body Works</text></svg>';">
+<img src="logobath&body.jpg" alt="Bath & Body Works" class="skincare-card-bg">
 <div class="skincare-overlay"></div>
 <div class="skincare-content">
 <h3 style="color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 8px;">Bath & Body Works</h3>
@@ -1063,9 +1036,9 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </div>
 </div>
 
-<!-- COLUMNA 3: VASELINE -->
+<!-- VASELINE -->
 <div class="skincare-card" onclick="openSkincareCategory('vaseline')">
-<img src="logovaseline.jpg" alt="Vaseline" class="skincare-card-bg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%23EAEAEA\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Montserrat\' font-size=\'14\' fill=\'%23777777\'>Vaseline</text></svg>';">
+<img src="logovaseline.jpg" alt="Vaseline" class="skincare-card-bg">
 <div class="skincare-overlay"></div>
 <div class="skincare-content">
 <h3 style="color: var(--blanco); font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px;">Vaseline</h3>
@@ -1105,7 +1078,7 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 </section>
 </div>
 
-<!-- VISTA DE CATÁLOGO / CATEGORÍA CON FILTROS Y ORDENAMIENTO -->
+<!-- VISTA DE CATÁLOGO / CATEGORÍA -->
 <div id="catalogo-vista" style="display: none;">
 <div class="section-header" style="padding-bottom: 20px;">
 <span class="section-tag" id="catalogo-subtitle">Catálogo</span>
@@ -1113,14 +1086,14 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 <a class="section-action-link" onclick="showHome()">← Volver al inicio</a>
 </div>
 
-<!-- SUB-NAVEGACIÓN INTERACTIVA DE BATH & BODY WORKS -->
+<!-- SUB-NAVEGACIÓN BATH & BODY WORKS -->
 <div id="bbw-subnav-container" class="subnav-container" style="display: none;">
-<button class="tab-btn active" id="btn-bbw-cremas" onclick="filterBBWSubcategory('cremas')">Body Motion / Cremas</button>
+<button class="tab-btn active" id="btn-bbw-cremas" onclick="filterBBWSubcategory('cremas')">Cremas</button>
 <button class="tab-btn" id="btn-bbw-splash" onclick="filterBBWSubcategory('splash')">Body Splash</button>
 <button class="tab-btn" id="btn-bbw-gel" onclick="filterBBWSubcategory('gel')">Gel Antibacterial</button>
 </div>
 
-<!-- SUB-NAVEGACIÓN INTERACTIVA DE VASELINE -->
+<!-- SUB-NAVEGACIÓN VASELINE -->
 <div id="vaseline-subnav-container" class="subnav-container" style="display: none;">
 <button class="tab-btn active" id="btn-vaseline-lip" onclick="filterVaselineSubcategory('lip_therapy')">Lip Therapy</button>
 <button class="tab-btn" id="btn-vaseline-glazed" onclick="filterVaselineSubcategory('glazed_glisten')">Glazed & Glisten</button>
@@ -1152,19 +1125,19 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 
 <!-- VISTA DETALLE DE PRODUCTO -->
 <div id="detalle-vista" style="display: none;">
-<div style="margin-bottom: 25px;">
+<div style="margin-bottom: 25px; padding: 20px 20px 0 20px;">
 <a class="section-action-link" onclick="showHome()">← Volver al inicio</a>
 </div>
 <div class="detalle-grid" id="detalle-content-container"></div>
 </div>
 
-<!-- VISTA DE INFORMACIÓN / POLÍTICAS / CONTACTO -->
+<!-- VISTA DE INFORMACIÓN -->
 <div id="info-vista" style="display: none;">
-<div style="margin-bottom: 25px;">
+<div style="margin-bottom: 25px; padding: 20px 20px 0 20px;">
 <a class="section-action-link" onclick="showHome()">← Volver al inicio</a>
 </div>
-<h2 id="info-title">Título de Información</h2>
-<div class="info-body-content" id="info-content"></div>
+<h2 id="info-title" style="padding: 0 20px;">Título</h2>
+<div class="info-body-content" id="info-content" style="padding: 0 20px 40px 20px;"></div>
 </div>
 
 <!-- PANEL LATERAL DEL CARRITO -->
@@ -1247,8 +1220,9 @@ text-align: center; border-top: 1px solid var(--gris-claro); padding-top: 30px; 
 <script>
 const PHONE_NUMBER = "573018738631";
 
-/* --- ARRAY DE PRODUCTOS --- */
+/* --- ARRAY DE PRODUCTOS COMPLETO --- */
 const perfumes = [
+/* PERFUMES HOMBRE */
 { id: 1, nombre: "ARMAF Ventana Pour Homme", marca: "Armaf", genero: "masculino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 190000, precioStr: "$ 190.000 COP", img: "VENTANA.JPG", visible: true, agotado: false },
 { id: 2, nombre: "Odyssey Eau De Montagne", marca: "Lattafa", genero: "masculino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 190000, precioStr: "$ 190.000 COP", img: "ODISSEYMONTAGNE.JPG", destacado: true, visible: true, agotado: true },
 { id: 3, nombre: "Habik", marca: "Lattafa", genero: "masculino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 180000, precioStr: "$ 180.000 COP", img: "HABIK.JPG", visible: true, agotado: false },
@@ -1257,26 +1231,64 @@ const perfumes = [
 { id: 6, nombre: "Odyssey Artisto Red Edition", marca: "Lattafa", genero: "masculino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 230000, precioStr: "$ 230.000 COP", img: "ARTISTO.JPG", visible: true, agotado: true },
 { id: 7, nombre: "Hawas", marca: "Rasasi", genero: "masculino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 230000, precioStr: "$ 230.000 COP", img: "HAWASFORHIM.JPG", destacado: true, visible: true, agotado: true },
 { id: 8, nombre: "Nautica", marca: "Nautica", genero: "masculino", presentacion: "3.3 oz", concentracion: "EDT", precioNum: 110000, precioStr: "$ 110.000 COP", img: "NAUTICACLASSIC.JPG", visible: true, agotado: true },
+
+/* PERFUMES MUJER */
 { id: 9, nombre: "Philos Rosso", marca: "Maison Alhambra", genero: "femenino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 190000, precioStr: "$ 190.000 COP", img: "PHILOS.JPG", destacado: true, visible: true, agotado: false },
 { id: 10, nombre: "Pepe Jeans for Her", marca: "Pepe Jeans", genero: "femenino", presentacion: "2.7 oz", concentracion: "EDP", precioNum: 180000, precioStr: "$ 180.000 COP", img: "LIVEISNOWPEPEJEANS.JPG", visible: true, agotado: false },
 { id: 11, nombre: "Bade'e Al Oud Noble Blush", marca: "Lattafa", genero: "femenino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 200000, precioStr: "$ 200.000 COP", img: "NOBLEBLUSH.JPG", visible: true, agotado: false },
 { id: 12, nombre: "ARMAF Legesi", marca: "Armaf", genero: "femenino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 140000, precioStr: "$ 140.000 COP", img: "LEGESI.JPG", visible: true, agotado: false },
 { id: 13, nombre: "The Kingdom", marca: "Lattafa", genero: "femenino", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 190000, precioStr: "$ 190.000 COP", img: "THEKINGDOM.JPG", visible: true, agotado: false },
+
+/* PERFUMES UNISEX */
 { id: 14, nombre: "Fakhar Gold", marca: "Lattafa", genero: "unisex", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 190000, precioStr: "$ 190.000 COP", img: "FAKHARGOLD.JPG", visible: true, agotado: false },
 { id: 15, nombre: "Khamrah", marca: "Lattafa", genero: "unisex", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 180000, precioStr: "$ 180.000 COP", img: "KHAMRAH.JPG", visible: true, agotado: false },
 { id: 16, nombre: "Khamrah Dukhan", marca: "Lattafa", genero: "unisex", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 210000, precioStr: "$ 210.000 COP", img: "DUKHAM.JPG", visible: true, agotado: false },
 { id: 17, nombre: "Odyssey Mandarin Sky Elixir", marca: "Lattafa", genero: "unisex", presentacion: "3.4 oz", concentracion: "EDP", precioNum: 250000, precioStr: "$ 250.000 COP", img: "MANDARINELIXIR.JPG", visible: true, agotado: false },
 
-/* --- EOS --- */
+/* EOS */
 { id: 101, nombre: "EOS Vanilla Cashmere Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eosvainillacashmere.jpg", visible: true, agotado: false },
 { id: 102, nombre: "EOS Pistachio Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eospistacho.jpg", visible: true, agotado: false },
+{ id: 103, nombre: "EOS Pink Champagne Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eospinkchampagne.jpg", visible: true, agotado: false },
+{ id: 104, nombre: "EOS Strawberry Body Lotion", marca: "EOS", categoria: "eos", genero: "femenino", presentacion: "16 oz", concentracion: "Crema Corporal", precioNum: 65000, precioStr: "$ 65.000 COP", img: "eosraspberry.jpg", visible: true, agotado: false },
 
-/* --- BATH & BODY WORKS --- */
+/* BATH & BODY WORKS - CREMAS */
 { id: 201, nombre: "Ivory Cashmere Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "ivorycashmerecrema.jpg", visible: true, agotado: false },
-{ id: 301, nombre: "Oh Cherry Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "ohcherrysplash.jpg", visible: true, agotado: false },
-{ id: 401, nombre: "A Thousand Wishes PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "thousandwishesgel.jpg", visible: true, agotado: false },
+{ id: 202, nombre: "In the Stars Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "inthestarcrema.jpg", visible: true, agotado: false },
+{ id: 203, nombre: "Midnight Rouge Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "rougecrema.jpg", visible: true, agotado: false },
+{ id: 204, nombre: "Gingham Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "ginghamcrema.jpg", visible: true, agotado: false },
+{ id: 205, nombre: "A Thousand Wishes Granted Body Lotion", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "cremas", genero: "femenino", presentacion: "8 fl oz", concentracion: "Crema Corporal", precioNum: 75000, precioStr: "$ 75.000 COP", img: "wishesgrantedcrema.jpg", visible: true, agotado: false },
 
-/* --- VASELINE (SOLO LOS TRES PRODUCTOS SOLICITADOS) --- */
+/* BATH & BODY WORKS - SPLASH */
+{ id: 301, nombre: "Oh Cherry Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "ohcherrysplash.jpg", visible: true, agotado: false },
+{ id: 302, nombre: "Orchid Effect Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "orchideffectsplash.jpg", visible: true, agotado: false },
+{ id: 303, nombre: "Gingham Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "ginghamsplash.jpg", visible: true, agotado: false },
+{ id: 304, nombre: "Pink Obsessed Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "pinkobessedsplash.jpg", visible: true, agotado: false },
+{ id: 305, nombre: "Imperfect Beauty Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "imperfectbeautysplash.jpg", visible: true, agotado: false },
+{ id: 306, nombre: "A Thousand Wishes Granted Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "wishesgrantedsplash.jpg", visible: true, agotado: false },
+{ id: 307, nombre: "In the Stars Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "inthestarsplah.jpg", visible: true, agotado: false },
+{ id: 308, nombre: "A Thousand Wishes Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "thousandowishessplash.jpg", visible: true, agotado: false },
+{ id: 309, nombre: "Midnight Rouge Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "midnightrougesplash.jpg", visible: true, agotado: false },
+{ id: 310, nombre: "viva vainilla Fine Fragrance Mist", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "splash", genero: "femenino", presentacion: "8 fl oz", concentracion: "Body Splash", precioNum: 75000, precioStr: "$ 75.000 COP", img: "vivavainillasplash.jpg", visible: true, agotado: false },
+
+/* BATH & BODY WORKS - GEL ANTIBACTERIAL */
+{ id: 401, nombre: "A Thousand Wishes PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "thousandwishesgel.jpg", visible: true, agotado: false },
+{ id: 402, nombre: "Cookie Butter Truffle PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "cookietrufflegel.jpg", visible: true, agotado: false },
+{ id: 403, nombre: "Santa’s Milk & Cookies PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "santamilkgel.jpg", visible: true, agotado: false },
+{ id: 404, nombre: "In the Stars PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "inthestargel.jpg", visible: true, agotado: false },
+{ id: 405, nombre: "Midnight Rouge PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "midnightrougegel.jpg", visible: true, agotado: false },
+{ id: 406, nombre: "Cozy Vanilla Almond PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "vainillaalmondgel.jpg", visible: true, agotado: false },
+{ id: 407, nombre: "Sunshine & Lemons PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "sunshine&lemonsgel.jpg", visible: true, agotado: false },
+{ id: 408, nombre: "Champagne Toast PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "champagnetoastgel.jpg", visible: true, agotado: false },
+{ id: 409, nombre: "Pink Peach Blossom PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "pinkpeachblossomgel.jpg", visible: true, agotado: false },
+{ id: 410, nombre: "Platinum PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "platinumgel.jpg", visible: true, agotado: false },
+{ id: 411, nombre: "Winterberry Ice PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "winterberryicegel.jpg", visible: true, agotado: false },
+{ id: 412, nombre: "Cozy Winter Cottage PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "wintercottagegel.jpg", visible: true, agotado: false },
+{ id: 413, nombre: "Strawberry Pound Cake PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "strawberrygel.jpg", visible: true, agotado: false },
+{ id: 414, nombre: "Warm Vanilla Sugar PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "vainillasugargel.jpg", visible: true, agotado: false },
+{ id: 415, nombre: "Frosted Coconut Snowball PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "coconutsnowballgel.jpg", visible: true, agotado: false },
+{ id: 416, nombre: "Eucalyptus Mint PocketBac Sanitizer", marca: "Bath & Body Works", categoria: "bbw", subcategoria: "gel", genero: "unisex", presentacion: "1 fl oz", concentracion: "Gel Antibacterial", precioNum: 75000, precioStr: "$ 75.000 COP", img: "eucalyptusmintgel.jpg", visible: true, agotado: false },
+
+/* VASELINE (TUS TRES PRODUCTOS EXACTOS) */
 { id: 501, nombre: "Vaseline Lip Therapy Rosy Lips", marca: "Vaseline", categoria: "vaseline", subcategoria: "lip_therapy", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "rosylips.jpg", visible: true, agotado: false },
 { id: 502, nombre: "Vaseline Lip Therapy Cocoa Butter", marca: "Vaseline", categoria: "vaseline", subcategoria: "lip_therapy", genero: "unisex", presentacion: "0.25 oz", concentracion: "Bálsamo Labial", precioNum: 15000, precioStr: "$ 15.000 COP", img: "cocoabutter.jpg", visible: true, agotado: false },
 { id: 504, nombre: "Vaseline Glazed & Glisten Golden Hour Glow Vanilla Cocoa", marca: "Vaseline", categoria: "vaseline", subcategoria: "glazed_glisten", genero: "unisex", presentacion: "6.8 fl oz", concentracion: "Body Gel Oil Shimmer", precioNum: 22000, precioStr: "$ 22.000 COP", img: "vaseline_glazed_golden_hour.jpg", visible: true, agotado: false }
@@ -1326,7 +1338,7 @@ filterPerfumes('todos');
 function buildCardHTML(p) {
 const generoLabel = p.genero === 'masculino' ? 'HOMBRE' : (p.genero === 'femenino' ? 'MUJER' : 'UNISEX');
 const badgeInfo = p.concentracion ? `${generoLabel} · ${p.presentacion} · ${p.concentracion}` : `${generoLabel} · ${p.presentacion}`;
-const textWa = encodeURIComponent(`Hola, ASMperfumes. Estoy interesado/a en el producto ${p.nombre} de ${p.presentacion}, con un precio de ${p.precioStr}. ¿Me pueden confirmar su disponibilidad y cómo puedo realizar la compra?`);
+const textWa = encodeURIComponent(`Hola, ASMperfumes. Estoy interesado/a en el producto ${p.nombre} de ${p.presentacion}, con un precio de ${p.precioStr}. ¿Me pueden confirmar su disponibilidad?`);
 const urlWa = `https://wa.me/${PHONE_NUMBER}?text=${textWa}`;
 
 const soldOutClass = p.agotado ? 'is-sold-out' : '';
@@ -1382,7 +1394,7 @@ function showHome() {
 hideAllViews();
 document.getElementById('hero-carousel').style.display = 'block';
 document.getElementById('home-view').style.display = 'block';
-window.scrollTo({ top: 0, behavior: 'smooth' });
+window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function openSkincareCategory(catKey) {
@@ -1411,7 +1423,7 @@ return;
 }
 
 applyFiltersAndSort();
-window.scrollTo({ top: 0, behavior: 'smooth' });
+window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function filterBBWSubcategory(subKey) {
@@ -1422,6 +1434,7 @@ if (subKey === 'splash') document.getElementById('btn-bbw-splash').classList.add
 if (subKey === 'gel') document.getElementById('btn-bbw-gel').classList.add('active');
 
 applyFiltersAndSort();
+window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function filterVaselineSubcategory(subKey) {
@@ -1431,6 +1444,7 @@ if (subKey === 'lip_therapy') document.getElementById('btn-vaseline-lip').classL
 if (subKey === 'glazed_glisten') document.getElementById('btn-vaseline-glazed').classList.add('active');
 
 applyFiltersAndSort();
+window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function filterPerfumes(cat) {
@@ -1456,7 +1470,7 @@ subTitleEl.textContent = 'Todas las fragancias y productos';
 }
 
 applyFiltersAndSort();
-window.scrollTo({ top: 0, behavior: 'smooth' });
+window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function applyFiltersAndSort() {
@@ -1554,35 +1568,17 @@ Consultar por WhatsApp
 <div class="detalle-footer-note">Disponibilidad y costo de envío se confirman por WhatsApp.</div>
 </div>
 `;
-window.scrollTo({ top: 0, behavior: 'smooth' });
+window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-/* --- NAVEGACIÓN Y CONTENIDO DE PÁGINAS DE INFORMACIÓN --- */
+/* --- PÁGINAS DE INFORMACIÓN --- */
 const infoData = {
-esencia: {
-title: "Nuestra Esencia",
-content: `<p>En <strong>ASMperfumes</strong> creemos que una fragancia es más que un simple accesorio: es una declaración de identidad, un sello personal que perdura en la memoria de quienes te rodean.</p>`
-},
-contacto: {
-title: "Contacto",
-content: `<p>• <strong>WhatsApp Directo:</strong> +57 301 873 8631<br>• <strong>Instagram:</strong> @asmperfumes_</p>`
-},
-faq: {
-title: "Preguntas Frecuentes",
-content: `<h3>¿Los productos son 100 % originales?</h3><p>Sí, absolutamente. Garantizamos la autenticidad total de todos nuestros productos.</p>`
-},
-politicas: {
-title: "Políticas de Compra",
-content: `<p>Todos los pedidos están sujetos a verificación de disponibilidad inmediata antes del despacho.</p>`
-},
-envios: {
-title: "Envíos y Devoluciones",
-content: `<p>Realizamos despachos a todo Colombia. Envío gratis por compras superiores a $250.000 COP.</p>`
-},
-privacidad: {
-title: "Privacidad y Tratamiento de Datos",
-content: `<p>Garantizamos la confidencialidad absoluta de la información proporcionada por nuestros clientes.</p>`
-}
+esencia: { title: "Nuestra Esencia", content: `<p>En <strong>ASMperfumes</strong> creemos que una fragancia es más que un simple accesorio: es una declaración de identidad y un sello personal.</p>` },
+contacto: { title: "Contacto", content: `<p>• <strong>WhatsApp Directo:</strong> +57 301 873 8631<br>• <strong>Instagram:</strong> @asmperfumes_</p>` },
+faq: { title: "Preguntas Frecuentes", content: `<h3>¿Los productos son 100 % originales?</h3><p>Sí, absolutamente. Garantizamos la autenticidad total de todos nuestros productos.</p>` },
+politicas: { title: "Políticas de Compra", content: `<p>Todos los pedidos están sujetos a verificación de disponibilidad inmediata antes del despacho.</p>` },
+envios: { title: "Envíos y Devoluciones", content: `<p>Realizamos despachos a todo Colombia. Envío gratis por compras superiores a $250.000 COP.</p>` },
+privacidad: { title: "Privacidad y Tratamiento de Datos", content: `<p>Garantizamos la confidencialidad absoluta de la información proporcionada por nuestros clientes.</p>` }
 };
 
 function openInfoPage(key) {
@@ -1593,7 +1589,7 @@ hideAllViews();
 document.getElementById('info-title').textContent = data.title;
 document.getElementById('info-content').innerHTML = data.content;
 document.getElementById('info-vista').style.display = 'block';
-window.scrollTo({ top: 0, behavior: 'smooth' });
+window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 let detailQtyValue = 1;
